@@ -1,2 +1,10 @@
 /websocket-front/node_modules/
-./.DS_Store
+**/.DS_Store
+/websocket-back/vendor
+websocket-back/node_modules/
+websocket-back/.env
+websocket-back/node_modules
+websocket-back/public/build
+websocket-back/public/hot
+websocket-back/public/storage
+websocket-back/storage/*.key
