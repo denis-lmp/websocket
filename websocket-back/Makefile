@@ -1,4 +1,4 @@
-.PHONY: docker-build docker-up composer-install migrate seed install down
+.PHONY: docker-build docker-up composer-install migrate seed frontend schedule install down
 
 # Build
 docker-build:
@@ -22,11 +22,17 @@ seed:
 
 #run frontend
 frontend:
-	cd ../websocket-front && npm run dev
+	cd ../websocket-front && npm install && npm run dev
+
+currency:
+	docker-compose exec app php artisan update-currency-data
+
+schedule:
+	docker-compose exec app php artisan schedule:work&
 
 # Stop
 down:
 	docker-compose down
 
 # Install dependencies, run Docker Compose, migrations, and seeders
-install: docker-build docker-up composer-install migrate seed frontend
+install: docker-build docker-up composer-install migrate seed currency frontend schedule

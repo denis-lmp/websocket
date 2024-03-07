@@ -1,6 +1,6 @@
 import Axios from 'axios';
-import API_URL from './config.js';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:80';
 const axios = Axios.create({
     baseURL: `${API_URL}/api`,
     withCredentials: true,

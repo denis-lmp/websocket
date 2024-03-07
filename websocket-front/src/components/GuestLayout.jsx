@@ -5,9 +5,9 @@ import { useAuth } from '../contexts/AuthContext';
 export default function GuestLayout() {
     const { user } = useAuth();
 
-    // if user is logged in, redirect to profile page
+    // if user is logged in, redirect to currency page
     if (user) {
-        return <Navigate to="/profile" />;
+        return <Navigate to="/currency" />;
     }
     return (
         <>

@@ -9,4 +9,3 @@ websocket-back/public/hot
 websocket-back/public/storage
 websocket-back/storage/*.key
 /websocket-back/docker/mysql_data/
-.DS_Store
