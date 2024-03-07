@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Login from './pages/Login';
-import About from './pages/About';
+import Currency from './pages/Currency';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 import ProtectedLayout from './components/ProtectedLayout';
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
         element: <ProtectedLayout />,
         children: [
             {
-                path: '/about',
-                element: <About />,
+                path: '/currency',
+                element: <Currency />,
             },
             {
                 path: '/profile',
